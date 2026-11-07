@@ -14,6 +14,13 @@ public enum MenuOption {
   UPDATE_USER(4, "Update user"),
   DELETE_USER(5, "Delete user"),
   LOGIN(6, "Login"),
+
+  LIST_BIENES(7, "List all bienes"),
+  FIND_BIEN(8, "Find bien by ID"),
+  CREATE_BIEN(9, "Create bien"),
+  UPDATE_BIEN(10, "Update bien"),
+  DELETE_BIEN(11, "Delete bien"),
+
   EXIT(0, "Exit");
 
   private final int number;
@@ -28,4 +35,3 @@ public enum MenuOption {
     return Optional.empty();
   }
 }
-
