@@ -31,3 +31,22 @@ VALUES (
     'ACTIVE'
 );
 
+-- =============================================
+-- Tabla de Bienes - Sistema CEA
+-- =============================================
+
+CREATE TABLE IF NOT EXISTS bienes (
+    id              VARCHAR(36) NOT NULL PRIMARY KEY,
+    codigo          VARCHAR(50) NOT NULL UNIQUE,
+    nombre          VARCHAR(150) NOT NULL,
+    descripcion     TEXT,
+    tipo            VARCHAR(100) NOT NULL,
+    unidad_medida   VARCHAR(50) NOT NULL,
+    valor_unitario  DECIMAL(15,2) NOT NULL,
+    estado          ENUM(
+                            'DISPONIBLE',
+                            'ASIGNADO',
+                            'EN_MANTENIMIENTO',
+                            'DADO_DE_BAJA'
+                        ) NOT NULL DEFAULT 'DISPONIBLE'
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
