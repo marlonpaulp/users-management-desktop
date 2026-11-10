@@ -40,3 +40,6 @@ build/
 .idea/
 *.log
 
+
+# Configuración local con credenciales
+src/main/resources/application-local.properties
